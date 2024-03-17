@@ -43,13 +43,13 @@ exec(
             fs.writeFile(packageJSON, data, (err2) => err2 || true);
         });
 
-        // const filesToCopy = ["webpack.config.js", ".babelrc"];
+        const filesToCopy = ["config/*", "scripts/*"];
 
-        // for (let i = 0; i < filesToCopy.length; i += 1) {
-        //     fs.createReadStream(path.join(__dirname, `../${filesToCopy[i]}`)).pipe(
-        //         fs.createWriteStream(`${process.argv[2]}/${filesToCopy[i]}`)
-        //     );
-        // }
+        for (let i = 0; i < filesToCopy.length; i += 1) {
+            fs.createReadStream(path.join(__dirname, `../${filesToCopy[i]}`)).pipe(
+                fs.createWriteStream(`${process.argv[2]}/${filesToCopy[i]}`)
+            );
+        }
 
         // npm will remove the .gitignore file when the package is installed, therefore it cannot be copied, locally and needs to be downloaded. Use your raw .gitignore once you pushed your code to GitHub.
         https.get(

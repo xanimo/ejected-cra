@@ -4,6 +4,11 @@
   "author": "xanimo",
   "version": "0.0.1-beta2",
   "license": "MIT",
+  "files": [
+    "bin",
+    "config",
+    "scripts"
+  ],
   "bin": {
     "ejected-cra": "./bin/start.js"
   },

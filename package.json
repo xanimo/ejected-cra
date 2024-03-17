@@ -1,7 +1,13 @@
 {
-  "name": "ejected-cra",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@xanimo/ejected-cra",
+  "description": "ejected-cra",
+  "author": "xanimo",
+  "version": "0.0.1-beta",
+  "license": "MIT",
+  "bin": {
+    "ejected-cra": "./bin/start.js"
+  },
+  "homepage": "https://github.com/xanimo/ejected-cra",
   "dependencies": {
     "@babel/core": "^7.24.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",

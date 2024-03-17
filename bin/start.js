@@ -43,7 +43,7 @@ exec(
             fs.writeFile(packageJSON, data, (err2) => err2 || true);
         });
 
-        const filesToCopy = ["config/*", "scripts/*"];
+        const filesToCopy = ["config/env.js", "config/getHttpsConfig.js", "config/modules.js", "config/paths.js", "config/webpack.config.js", "config/webpackDevServer.config.js", "config/jest/babelTransform.js", "config/jest/cssTransform.js", "config/jest/fileTransform.js", "config/webpack/persistentCache/createEnvironmentHash.js", "scripts/build.js", "scripts/start.js", "scripts/test.js"];
 
         for (let i = 0; i < filesToCopy.length; i += 1) {
             fs.createReadStream(path.join(__dirname, `../${filesToCopy[i]}`)).pipe(

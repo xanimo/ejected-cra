@@ -38,11 +38,15 @@ exec(
         fs.readFile(packageJSON, (err, file) => {
             if (err) throw err;
             file = file.toString().split(',').map((value) => {
+                console.log(value);
                 if (value.includes('\n  "files": [\n    "bin"') 
                 || value.includes('\n    "config"') 
-                || value.includes('\n    "scripts"\n  ]')
+                || value.includes('\n    "scripts"') 
+                || value.includes('\n    "src"') 
+                || value.includes('\n    "public"\n  ]')
                 || value.includes('\n  "bin": {\n    "ejected-cra": "./bin/start.js"\n  }')
                 || value.includes("homepage")) {
+                    console.log(value);
                 } else {
                     return value;
                 }
@@ -65,7 +69,8 @@ exec(
                         }).join(':');
                     }
                     return value;
-            }).join('\n')
+            }).join('\n').replace(',,,', ',');
+            console.log(data);
             fs.writeFile(packageJSON, data, (err2) => err2 || true);
         });
 

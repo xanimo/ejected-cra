@@ -2,6 +2,13 @@
 
 This project is an opinionated bootstrap made from the ejected scripts and configuration files from [Create React App](https://github.com/facebook/create-react-app). Since facebook no longer develops create-react-app and minimally maintains their repository, there is no way to run `npx create-react-app <your app>` without introducing security vulnerabilities into your development environment, thus the need to eject the scripts and configuration, update the dependencies and repackage.
 
+```
+npm i -g @xanimo/ejected-cra
+ejected-cra <my-project>
+cd <my-project>
+npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

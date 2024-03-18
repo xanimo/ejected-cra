@@ -7,7 +7,9 @@
   "files": [
     "bin",
     "config",
-    "scripts"
+    "scripts",
+    "src",
+    "public"
   ],
   "bin": {
     "ejected-cra": "./bin/start.js"

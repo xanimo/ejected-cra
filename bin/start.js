@@ -19,7 +19,7 @@ console.log("Initializing project..");
 
 const copy = (from, to) => {
     fs.copy(path.join(__dirname, from), `${to}/${from}`)
-    .then((response) => console.log(`${response}\nCopied directory ${from} to directory ${to}`)
+    .then(() => console.log(`Copied directory ${from} to directory ${to}`)
     ).catch((err) => console.error(err))
 }
 
